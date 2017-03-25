@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "1a8f874cd6c3a45e41fcc7d3302e8e60"
+build_time: [543788751, 440998000]
+inputs:
+  "/Users/Avinash/Documents/Code/TripGuru/TripGuru/TripGuru/ViewController.swift": [543788747, 0]
+  "/Users/Avinash/Documents/Code/TripGuru/TripGuru/TripGuru/AppDelegate.swift": [543788747, 0]
