@@ -1,1 +1,1 @@
-web: gunicorn TripGuruServer:app
+web: gunicorn app:app
