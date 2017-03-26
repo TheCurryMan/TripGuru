@@ -32,13 +32,9 @@ def reviews():
   allReviews = get_revs(request.args.get('attraction'), request.args.get('city'))
   print(allReviews)
   finalStr = ""
+  scoreText = calculate_review_num(allReviews)
   for rev in allReviews:
     finalStr = finalStr + rev + "|"
-  return finalStr
-
-@app.route('/weather', methods=['GET', 'POST'])
-def weather():
-  return get_hourly_weather(request.args.get('city'), 'State')
-
+  return finalStr + str(scoreText)
 
 
