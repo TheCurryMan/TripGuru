@@ -10,7 +10,7 @@ app = Flask(__name__)
 def index():
   return "Hello this is cool"
 
-@app.route('/attractions', method=['GET', 'POST'])
+@app.route('/attractions', methods=['GET', 'POST'])
 def attractions():
 
   return getAttractions(request.args.get('city'))
