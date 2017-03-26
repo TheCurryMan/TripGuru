@@ -15,7 +15,7 @@ def get_revs(attraction, city):
 
     reviews = []
     for item in soup.findAll("p", {"class": "quote"}):
-        reviews.append(item.text[13:-14].encode('ascii', errors='ignore'))
+        reviews.append(item.text[13:-15].encode('ascii', errors='ignore'))
     return reviews
 
 def convertSpaces(name):
@@ -31,3 +31,5 @@ def calculate_review_num(reviews):
         perc = rev['probability'][label]
         sum = (sum + perc)
     return sum/len(reviews) * 10
+
+print(get_revs("Golden Gate Bridge", "San Francisco"))
