@@ -258,7 +258,7 @@ def sortAttractions(data):
    print(ordered_list_of_places)
    list_of_durations = getTime(ordered_list_of_cities)
    dictionary = dict(zip(ordered_list_of_places,list_of_durations))
-   final = json.dumps(dictionary)
+   final = (dictionary)
    return final
 
 def convert(data):
