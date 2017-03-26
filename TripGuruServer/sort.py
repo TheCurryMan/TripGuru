@@ -300,8 +300,3 @@ def totalTime(self, list_of_cities):
       totalDur += d
    return totalDur
 
-   
-
-
-
-sortAttractions("Museum of Pop Culture,47.6215,-122.348|Pike Place Market,47.6098,-122.341|Kerry Park,47.6295,-122.36|Pike Place%20Market%20Gum%20Wall,47.6084,-122.34|Space%20Needle,47.6205,-122.349|Bill%20Speidel's%20Underground%20Tour,47.6024,-122.334|Seattle%20Aquarium,47.6078,-122.343")
