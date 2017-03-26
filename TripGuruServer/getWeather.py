@@ -13,3 +13,5 @@ def get_hourly_weather(city):
     for item in rev['forecast']['forecastday'][0]['hour']:
         twelve_hour = twelve_hour + str(item['will_it_rain']) + ","
     return twelve_hour[:-1]
+
+print(get_hourly_weather('San Francisco'))

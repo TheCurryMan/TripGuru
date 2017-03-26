@@ -14,8 +14,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TripGuruServer$sort.coverage" NAME="sort Coverage Results" MODIFIED="1490545148859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TripGuruServer$getWeather.coverage" NAME="getWeather Coverage Results" MODIFIED="1490535255382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TripGuruServer$sort.coverage" NAME="sort Coverage Results" MODIFIED="1490546268068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TripGuruServer$getWeather.coverage" NAME="getWeather Coverage Results" MODIFIED="1490546371572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TripGuruServer$getImage.coverage" NAME="getImage Coverage Results" MODIFIED="1490487599503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TripGuruServer$getReviews.coverage" NAME="getReviews Coverage Results" MODIFIED="1490534078963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TripGuruServer$test.coverage" NAME="test Coverage Results" MODIFIED="1490483442186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -54,8 +54,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.588843">
-              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.75">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -67,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/getWeather.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -78,8 +78,8 @@
       <file leaf-file-name="sort.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sort.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.333333">
-              <caret line="268" column="46" selection-start-line="268" selection-start-column="46" selection-end-line="268" selection-end-column="46" />
+            <state vertical-scroll-proportion="-7.0925927">
+              <caret line="321" column="314" selection-start-line="321" selection-start-column="314" selection-end-line="321" selection-end-column="314" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -140,9 +140,9 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/getAttractionsFromName.py" />
         <option value="$PROJECT_DIR$/getImage.py" />
-        <option value="$PROJECT_DIR$/sort.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/getReviews.py" />
+        <option value="$PROJECT_DIR$/sort.py" />
         <option value="$PROJECT_DIR$/getWeather.py" />
         <option value="$PROJECT_DIR$/app.py" />
       </list>
@@ -214,7 +214,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="Python.sort">
+  <component name="RunManager" selected="Python.getWeather">
     <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -526,8 +526,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.sort" />
-        <item index="1" class="java.lang.String" itemvalue="Python.getWeather" />
+        <item index="0" class="java.lang.String" itemvalue="Python.getWeather" />
+        <item index="1" class="java.lang.String" itemvalue="Python.sort" />
         <item index="2" class="java.lang.String" itemvalue="Python.getReviews" />
         <item index="3" class="java.lang.String" itemvalue="Python.getImage" />
         <item index="4" class="java.lang.String" itemvalue="Python.test" />
@@ -555,11 +555,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3097015" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3097015" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -721,16 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.333333">
-          <caret line="268" column="46" selection-start-line="268" selection-start-column="46" selection-end-line="268" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -749,10 +739,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0925927">
+          <caret line="321" column="314" selection-start-line="321" selection-start-column="314" selection-end-line="321" selection-end-column="314" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/getWeather.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -761,8 +761,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.588843">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.75">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

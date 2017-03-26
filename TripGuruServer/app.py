@@ -22,7 +22,9 @@ def attractions():
 def sort():
   dat = {}
   dat = sortAttractions(request.args.get('data'))
-  dat["weather"] = get_hourly_weather(request.args.get('city'))
+  print(dat)
+  weather = str(get_hourly_weather(request.args.get('city')))
+  dat["weather"] = weather
   return json.dumps(dat)
 
  
