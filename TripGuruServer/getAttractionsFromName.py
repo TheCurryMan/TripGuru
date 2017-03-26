@@ -7,7 +7,7 @@ from getImage import getImageURLfromName
 #from firebase import firebase
 
 
-def getAttractions(name):
+def getAttractions(city):
     #firebase = firebase.FirebaseApplication('https://tripguru-a156e.firebaseio.com/', None)
     #city_tree = firebase.get("/Cities", None)
 
@@ -15,7 +15,6 @@ def getAttractions(name):
     client_id = "MRWYCFCN23JZYHMqUG20CA"
     client_secret = "vcy71k5kcNFtQJ4u6WnvyqmvtfsstSBawSMfQV5HhGdBDNu0iVVCZWtGcLpmg1QJ"
 
-    city = name
 
     def convert(data):
         if isinstance(data, basestring):
@@ -28,7 +27,7 @@ def getAttractions(name):
             return data
 
     yelp_api = YelpAPI(client_id, client_secret)
-    search_results = yelp_api.search_query(term='attractions', location=name, sort_by='review_count', limit=8)
+    search_results = yelp_api.search_query(term='attractions', location=city, sort_by='review_count', limit=8)
     converted = (convert(search_results))
     finalDict = {}
     for places in converted["businesses"]:
