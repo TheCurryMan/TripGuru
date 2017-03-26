@@ -238,8 +238,6 @@ def sortAttractions(data):
       list_of_places.append(string[0])
       list_of_cities.append(City(string[0], float(string[1]), float(string[2])))
    #Initialize pop and run GA
-   print(list_of_places)
-   print(list_of_cities)
    pop = Population(tour_manager, 50, True);
    print "Initial distance: " + str(pop.getFittest().getDistance())
    
@@ -254,9 +252,9 @@ def sortAttractions(data):
    for city in bestPop:
       ordered_list_of_places.append(city.getName())
       ordered_list_of_cities.append(city)
-   print(ordered_list_of_cities)
-   print(ordered_list_of_places)
+   print "Places: " + str(ordered_list_of_places)
    list_of_durations = getTime(ordered_list_of_cities)
+   print "Durations: " + str(list_of_durations)
    dictionary = dict(zip(ordered_list_of_places,list_of_durations))
    final = json.dumps(dictionary)
    return final
@@ -277,14 +275,10 @@ def getTime(list_of_cities):
    d['destination'] = str(list_of_cities[len(list_of_cities) - 1].getX()) + "," + str(list_of_cities[len(list_of_cities) - 1].getY())
    if(len(list_of_cities) > 2):
       waypoint = str(list_of_cities[2].getX()) + "," + str(list_of_cities[2].getY()) + "|"
-   for city in list_of_cities[2:(len(list_of_cities) - 3)]:
+   for city in list_of_cities[2:(len(list_of_cities) - 2)]:
       waypoint += str(city.getX()) + "," + str(city.getY()) + "|"
    waypoint += str(list_of_cities[len(list_of_cities) - 2].getX()) + "," + str(list_of_cities[len(list_of_cities) - 2].getY())
    d['waypoints'] = waypoint
-   print(d['origin'])
-   print(d['destination'])
-   print(waypoint)
-   print(d)
    d['key'] = "AIzaSyA_KUnYEKuOodre8lcfEhYQZbwmQhxqgwY"
    r = requests.get("https://maps.googleapis.com/maps/api/directions/json?", d)
    data = r.text
@@ -294,9 +288,7 @@ def getTime(list_of_cities):
    list_of_durations.append(60)
    for leg in final['routes'][0]['legs']:
       dur = leg['duration']['value']
-      print(dur)
       list_of_durations.append(int(dur)/60 + 60)
-   print(list_of_durations)
    return list_of_durations
 
 def totalTime(self, list_of_cities):
