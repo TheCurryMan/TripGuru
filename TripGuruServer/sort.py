@@ -4,7 +4,7 @@ import json
 import requests
 import collections
 import pprint
-
+from getWeather import get_hourly_weather
 
 class City:
    def __init__(self, name, x=None, y=None):
@@ -254,8 +254,10 @@ def sortAttractions(data):
       print(city.getName())
       ordered_list_of_places.append(city.getName())
       ordered_list_of_cities.append(city)
+   ordered_list_of_places.append("Weather")
    print "Places: " + str(ordered_list_of_places)
    list_of_durations = getTime(ordered_list_of_cities)
+   list_of_durations.append(str(get_hourly_weather('San Francisco')))
    print "Durations: " + str(list_of_durations)
    dictionary = dict(zip(ordered_list_of_places,list_of_durations))
    print(dictionary)
