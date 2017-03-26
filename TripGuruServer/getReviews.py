@@ -28,5 +28,5 @@ def calculate_review_num(reviews):
     for item in reviews:
         blob = TextBlob(item)
         sum = sum + (blob.sentiment.polarity)
-        final = ceil(sum * 100.0) /100.0
+    final = ceil(sum * 100.0) /100.0        
     return "The sentiment analysis for the reviews is : " + str(final/len(reviews) * 10) + "/10.0"
