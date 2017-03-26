@@ -250,12 +250,14 @@ def sortAttractions(data):
    bestPop = pop.getFittest()
 
    for city in bestPop:
+      print(city.getName())
       ordered_list_of_places.append(city.getName())
       ordered_list_of_cities.append(city)
    print "Places: " + str(ordered_list_of_places)
    list_of_durations = getTime(ordered_list_of_cities)
    print "Durations: " + str(list_of_durations)
    dictionary = dict(zip(ordered_list_of_places,list_of_durations))
+   print(dictionary)
    return dictionary
 
 def convert(data):
