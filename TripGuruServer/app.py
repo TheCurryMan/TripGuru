@@ -3,7 +3,7 @@ import json
 from getAttractionsFromName import getAttractions
 from getReviews import get_revs, calculate_review_num
 from sort import sortAttractions
-
+from getWeather import get_hourly_weather
 
 app = Flask(__name__)
 
@@ -35,4 +35,10 @@ def reviews():
   for rev in allReviews:
     finalStr = finalStr + rev + "|"
   return finalStr
+
+@app.route('/weather', methods=['GET', 'POST'])
+def weather():
+  return get_hourly_weather(request.args.get('city'), 'State')
+
+
 

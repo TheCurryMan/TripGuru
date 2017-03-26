@@ -31,3 +31,5 @@ def calculate_review_num(reviews):
         perc = rev['probability'][label]
         sum = (sum + perc)
     return sum/len(reviews) * 10
+
+print(get_revs("Japanese Tea Garden",  "San Francisco"))
