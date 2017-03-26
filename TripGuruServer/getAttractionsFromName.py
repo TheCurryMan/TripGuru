@@ -27,7 +27,7 @@ def getAttractions(city):
             return data
 
     yelp_api = YelpAPI(client_id, client_secret)
-    search_results = yelp_api.search_query(term='attractions', location=city, sort_by='review_count', limit=15)
+    search_results = yelp_api.search_query(term='attractions', location=city, sort_by='review_count', limit=12)
     converted = (convert(search_results))
     finalDict = {}
     for places in converted["businesses"]:
