@@ -36,7 +36,7 @@ def getAttractions(name):
         idx = val + str(counter)
         name = places["name"]
         lat = places['coordinates']['latitude']
-        lng = ['coordinates']['longitude']
+        lng = places['coordinates']['longitude']
         url = getImageURLfromName(name)
         finalDict[name] = {"lat": lat, "long":lng, "url":url}
 
