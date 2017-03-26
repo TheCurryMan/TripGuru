@@ -34,6 +34,6 @@ def reviews():
   score = calculate_review_num(allReviews)
   finalStr = ""
   for i in allReviews:
-    finalStr += i + ","
-  return finalStr + score
+    finalStr += i + "|"
+  return finalStr + str(score)
 
