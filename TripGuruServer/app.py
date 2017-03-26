@@ -1,6 +1,6 @@
 from flask import Flask, request
 import json
-from getAttractionsFromName import getAttractions
+from sort import sortAttractions
 
 app = Flask(__name__)
 
@@ -18,5 +18,8 @@ def attractions():
 @app.route('/sort', methods=['GET', 'POST'])
 def sort():
 
-  return getAttractions(request.args.get('data'))
+  return sortAttractions(request.args.get('data'))
+
+
+ 
 
