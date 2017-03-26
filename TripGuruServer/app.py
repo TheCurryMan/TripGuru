@@ -2,6 +2,8 @@ from flask import Flask, request
 import json
 from getAttractionsFromName import getAttractions
 from getReviews import get_revs, calculate_review_num
+from sort import sortAttractions
+
 
 app = Flask(__name__)
 
@@ -19,7 +21,10 @@ def attractions():
 @app.route('/sort', methods=['GET', 'POST'])
 def sort():
 
-  return getAttractions(request.args.get('data'))
+  return sortAttractions(request.args.get('data'))
+
+
+ 
 
 @app.route('/reviews', methods=['GET', 'POST'])
 def reviews():
