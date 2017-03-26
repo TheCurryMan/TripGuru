@@ -33,7 +33,7 @@ def reviews():
   print(allReviews)
   score = calculate_review_num(allReviews)
   finalStr = ""
-  for i in allReviews:
-    finalStr += i + "|"
+  for rev in allReviews:
+    finalStr = finalStr + rev + "|"
   return finalStr + str(score)
 
