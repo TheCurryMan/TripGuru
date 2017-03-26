@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import urllib2
 import json
 
-names = ["Golden Gate Bridge", "Pier 39", "Alcatraz Island", "Fisherman's Wharf", "Union Square", "ChinaTown", "Lombard Street"]
+#names = ["Golden Gate Bridge", "Pier 39", "Alcatraz Island", "Fisherman's Wharf", "Union Square", "ChinaTown", "Lombard Street"]
 
 def get_soup(url,header):
     return BeautifulSoup(urllib2.urlopen(urllib2.Request(url,headers=header)),'html.parser')
@@ -32,7 +32,5 @@ def getImageURLfromName(query, num = 1): #num less than 100
 
     ###print images
     for i , (img , Type) in enumerate(ActualImages):
-        print img
-
-for i in names:
-    (find(i))
+        return img
+        break
