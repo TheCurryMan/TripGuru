@@ -7,7 +7,7 @@ def get_revs(attraction, city):
     print(city)
     attraction = convertSpaces(attraction)
     city = convertSpaces(city)
-    url = "https://www.yelp.com/biz/" + attraction + "-" + city + "?osq=tourist+attractions"
+    url = "https://www.yelp.com/biz/" + attraction + "-" + city 
     r = requests.get(url)
 
     data = r.text
