@@ -32,5 +32,8 @@ def reviews():
   allReviews = get_revs(request.args.get('attraction'), request.args.get('city'))
   print(allReviews)
   score = calculate_review_num(allReviews)
-  return allReviews + score
+  finalStr = ""
+  for i in allReviews:
+    finalStr += i + ","
+  return finalStr + score
 

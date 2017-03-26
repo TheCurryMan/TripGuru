@@ -13,9 +13,9 @@ def get_revs(attraction, city):
     data = r.text
     soup = BeautifulSoup(data, "html.parser")
 
-    reviews = ""
+    reviews = []
     for item in soup.findAll("p", {"class": "quote"}):
-        reviews += (item.text[13:-14].encode('ascii', errors='ignore')) + ","
+        reviews.append(item.text[13:-14].encode('ascii', errors='ignore')) + ","
     return reviews
 
 def convertSpaces(name):
