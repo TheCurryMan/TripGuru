@@ -2,6 +2,8 @@ import math
 import random
 import json
 import requests
+import collections
+import pprint
 
 
 class City:
@@ -32,7 +34,7 @@ class City:
       lat2 = math.radians(self.y)
       lng1 = math.radians(city.x)
       lng2 = math.radians(city.y)
-      a = (math.pow(math.sin((lat2-lat1)/2), 2) + math.cos(lat1)*math.cos(lat2)*math.pow(math.sin((lng2-lng1)/2,2)))
+      a = (math.pow(math.sin((lat2-lat1)/2), 2) + math.cos(lat1)*math.cos(lat2)*math.pow(math.sin((lng2-lng1)/2),2))
       c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
       #Radius of earth (m)
       R = 6371000
@@ -228,13 +230,16 @@ def sortAttractions(data):
    list_of_places = []
    list_of_cities = []
    ordered_list_of_places = []
+   ordered_list_of_cities = []
    newData = data.split('|')
    latestData = [w.split(',') for w in newData]
    for string in latestData:
-      tour_manager.addCity(City(string[0], string[1], string[2]))
+      tour_manager.addCity(City(string[0], float(string[1]), float(string[2])))
       list_of_places.append(string[0])
-      list_of_cities.append(City(string[0], string[1], string[2]))
+      list_of_cities.append(City(string[0], float(string[1]), float(string[2])))
    #Initialize pop and run GA
+   print(list_of_places)
+   print(list_of_cities)
    pop = Population(tour_manager, 50, True);
    print "Initial distance: " + str(pop.getFittest().getDistance())
    
@@ -248,30 +253,50 @@ def sortAttractions(data):
 
    for city in bestPop:
       ordered_list_of_places.append(city.getName())
-   list_of_durations = getTime(ordered_list_of_places)
+      ordered_list_of_cities.append(city)
+   print(ordered_list_of_cities)
+   print(ordered_list_of_places)
+   list_of_durations = getTime(ordered_list_of_cities)
    dictionary = dict(zip(ordered_list_of_places,list_of_durations))
    final = json.dumps(dictionary)
    return final
 
-def getTime(self, list_of_cities):
+def convert(data):
+    if isinstance(data, basestring):
+        return data.encode('utf-8')
+    elif isinstance(data, collections.Mapping):
+        return dict(map(convert, data.iteritems()))
+    elif isinstance(data, collections.Iterable):
+        return type(data)(map(convert, data))
+    else:
+        return data
+
+def getTime(list_of_cities):
    d = {}
-   d['origin'] = list_of_cities[0].getX() + "," + list_of_cities[0].getY()
-   d['destination'] = list_of_cities[len(list_of_cities) - 1].getX() + "," + list_of_cities[len(list_of_cities) - 1].getY()
+   d['origin'] = str(list_of_cities[0].getX()) + "," + str(list_of_cities[0].getY())
+   d['destination'] = str(list_of_cities[len(list_of_cities) - 1].getX()) + "," + str(list_of_cities[len(list_of_cities) - 1].getY())
    if(len(list_of_cities) > 2):
-      waypoint = list_of_cities[2].getX() + "," + list_of_cities[2].getY() + "|"
+      waypoint = str(list_of_cities[2].getX()) + "," + str(list_of_cities[2].getY()) + "|"
    for city in list_of_cities[2:(len(list_of_cities) - 3)]:
-      waypoint += city.getX() + "," + city.getY() + "|"
-   waypoint += list_of_cities[len(list_of_cities) - 2].getX() + "," + list_of_cities[len(list_of_cities) - 2].getY()
-   d['waypoint'] = waypoint
+      waypoint += str(city.getX()) + "," + str(city.getY()) + "|"
+   waypoint += str(list_of_cities[len(list_of_cities) - 2].getX()) + "," + str(list_of_cities[len(list_of_cities) - 2].getY())
+   d['waypoints'] = waypoint
+   print(d['origin'])
+   print(d['destination'])
+   print(waypoint)
+   print(d)
    d['key'] = "AIzaSyA_KUnYEKuOodre8lcfEhYQZbwmQhxqgwY"
    r = requests.get("https://maps.googleapis.com/maps/api/directions/json?", d)
    data = r.text
    data = convert(data)
    final = json.loads(data)
    list_of_durations = []
-   list_of_durations.append(1)
+   list_of_durations.append(60)
    for leg in final['routes'][0]['legs']:
-      list_of_durations.append(int(['duration']['value'])+1)
+      dur = leg['duration']['value']
+      print(dur)
+      list_of_durations.append(int(dur)/60 + 60)
+   print(list_of_durations)
    return list_of_durations
 
 def totalTime(self, list_of_cities):
@@ -285,3 +310,4 @@ def totalTime(self, list_of_cities):
    
 
 
+sortAttractions("Museum%20of%20Pop%20Culture,47.6215,-122.348|Pike%20Place%20Market,47.6098,-122.341|Kerry%20Park,47.6295,-122.36|Pike%20Place%20Market%20Gum%20Wall,47.6084,-122.34|Space%20Needle,47.6205,-122.349|Bill%20Speidel%27s%20Underground%20Tour,47.6024,-122.334|Seattle%20Aquarium,47.6078,-122.343")
