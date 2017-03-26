@@ -30,6 +30,7 @@ def sort():
 def reviews():
 
   allReviews = get_revs(request.args.get('attraction'), request.args.get('city'))
+  print(allReviews)
   score = calculate_review_num(allReviews)
   return allReviews + score
 

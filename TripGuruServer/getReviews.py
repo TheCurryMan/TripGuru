@@ -3,6 +3,8 @@ import requests
 import ast
 
 def get_revs(attraction, city):
+    print(attraction)
+    print(city)
     attraction = convertSpaces(attraction)
     city = convertSpaces(city)
     url = "https://www.yelp.com/biz/" + attraction + "-" + city + "?osq=tourist+attractions"
