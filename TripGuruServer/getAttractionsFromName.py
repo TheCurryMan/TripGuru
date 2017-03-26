@@ -15,6 +15,8 @@ def getAttractions(name):
     client_id = "MRWYCFCN23JZYHMqUG20CA"
     client_secret = "vcy71k5kcNFtQJ4u6WnvyqmvtfsstSBawSMfQV5HhGdBDNu0iVVCZWtGcLpmg1QJ"
 
+    city = name
+
     def convert(data):
         if isinstance(data, basestring):
             return str(data)
@@ -34,7 +36,7 @@ def getAttractions(name):
         name = places["name"]
         lat = places['coordinates']['latitude']
         lng = places['coordinates']['longitude']
-        url = getImageURLfromName(name)
+        url = getImageURLfromName(city + " " + name)
         finalDict[name] = {"lat": lat, "long":lng, "url":url}
 
 

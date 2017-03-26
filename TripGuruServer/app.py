@@ -15,3 +15,8 @@ def attractions():
 
   return getAttractions(request.args.get('city'))
 
+@app.route('/sort', methods=['GET', 'POST'])
+def sort():
+
+  return getAttractions(request.args.get('data'))
+
