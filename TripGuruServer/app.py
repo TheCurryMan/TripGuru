@@ -20,9 +20,8 @@ def attractions():
 
 @app.route('/sort', methods=['GET', 'POST'])
 def sort():
-  dat = sortAttractions(request.args.get('data'))
+  return sortAttractions(request.args.get('data'))
 
-  return dat
 
  
 

@@ -4,7 +4,6 @@ import json
 import requests
 import collections
 import pprint
-from getWeather import get_hourly_weather
 
 
 class City:
@@ -258,11 +257,8 @@ def sortAttractions(data):
    print(ordered_list_of_cities)
    print(ordered_list_of_places)
    list_of_durations = getTime(ordered_list_of_cities)
-   ordered_list_of_places.append("Weather")
-   list_of_durations.append(get_hourly_weather('San Francisco'))
    dictionary = dict(zip(ordered_list_of_places,list_of_durations))
-   print(dictionary)
-   final = (dictionary)
+   final = json.dumps(dictionary)
    return final
 
 def convert(data):
@@ -311,4 +307,7 @@ def totalTime(self, list_of_cities):
    return totalDur
 
    
-   
+
+
+
+sortAttractions("Museum%20of%20Pop%20Culture,47.6215,-122.348|Pike%20Place%20Market,47.6098,-122.341|Kerry%20Park,47.6295,-122.36|Pike%20Place%20Market%20Gum%20Wall,47.6084,-122.34|Space%20Needle,47.6205,-122.349|Bill%20Speidel%27s%20Underground%20Tour,47.6024,-122.334|Seattle%20Aquarium,47.6078,-122.343")
