@@ -88,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getReviews.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getReviews.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getReviews.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="87" selection-start-line="31" selection-start-column="87" selection-end-line="31" selection-end-column="87" />
+            <state vertical-scroll-proportion="0.93657506">
+              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -100,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getAttractionsFromName.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getAttractionsFromName.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getAttractionsFromName.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72938687">
+            <state vertical-scroll-proportion="0.0">
               <caret line="29" column="109" selection-start-line="29" selection-start-column="109" selection-end-line="29" selection-end-column="109" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -144,8 +144,8 @@
         <option value="$PROJECT_DIR$/getWeather.py" />
         <option value="$PROJECT_DIR$/sort.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/getReviews.py" />
         <option value="$PROJECT_DIR$/getAttractionsFromName.py" />
+        <option value="$PROJECT_DIR$/getReviews.py" />
       </list>
     </option>
   </component>
@@ -746,16 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getReviews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="87" selection-start-line="31" selection-start-column="87" selection-end-line="31" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getImage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.444445">
@@ -768,10 +758,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getAttractionsFromName.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72938687">
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="109" selection-start-line="29" selection-start-column="109" selection-end-line="29" selection-end-column="109" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getReviews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93657506">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
