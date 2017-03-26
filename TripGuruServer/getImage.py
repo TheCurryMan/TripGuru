@@ -14,6 +14,7 @@ def getImageURLfromName(query, num = 1): #num less than 100
     query= query.split()
     query='+'.join(query)
     url="https://www.google.co.in/search?q="+query+"&source=lnms&tbm=isch"
+    print(url)
 
     #add the directory for your image here
     DIR="Pictures"
