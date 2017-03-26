@@ -272,7 +272,7 @@ def getTime(self, list_of_cities):
       list_of_durations.append(int(['duration']['value'])+1)
    return list_of_durations
 
-def totalTime(self, list_of_cities)
+def totalTime(self, list_of_cities):
    list_of_durations = getTime(list_of_cities)
    totalDur = 0
    for d in list_of_durations:
