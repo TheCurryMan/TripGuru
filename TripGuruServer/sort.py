@@ -4,6 +4,7 @@ import json
 import requests
 import collections
 import pprint
+from getWeather import get_hourly_weather
 
 
 class City:
@@ -257,7 +258,10 @@ def sortAttractions(data):
    print(ordered_list_of_cities)
    print(ordered_list_of_places)
    list_of_durations = getTime(ordered_list_of_cities)
+   ordered_list_of_places.append("Weather")
+   list_of_durations.append(get_hourly_weather('San Francisco'))
    dictionary = dict(zip(ordered_list_of_places,list_of_durations))
+   print(dictionary)
    final = (dictionary)
    return final
 
@@ -270,15 +274,6 @@ def convert(data):
         return type(data)(map(convert, data))
     else:
         return data
-def get_hourly_weather(city):
-    twelve_hour = ""
-    url = "https://api.apixu.com/v1/forecast.json?key=" + API_key + "&q=" + city
-    r = requests.get(url)
-    res = r.text
-    rev = ast.literal_eval(res)
-    for item in rev['forecast']['forecastday'][0]['hour']:
-        twelve_hour = twelve_hour + str(item['will_it_rain']) + ","
-    return twelve_hour[:-1]
 
 def getTime(list_of_cities):
    d = {}
