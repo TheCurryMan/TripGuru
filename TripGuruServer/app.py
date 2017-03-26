@@ -20,11 +20,8 @@ def attractions():
 
 @app.route('/sort', methods=['GET', 'POST'])
 def sort():
-  dat = {}
   dat = sortAttractions(request.args.get('data'))
-  print(type(dat))
-  #weath = str(get_hourly_weather(request.args.get('city')))
-  #dat['weather'] = weath
+
   return dat
 
  
