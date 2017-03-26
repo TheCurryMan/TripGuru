@@ -30,5 +30,3 @@ def calculate_review_num(reviews):
         sum = sum + (blob.sentiment.polarity)
         final = ceil(sum * 100.0) /100.0
     return "The sentiment analysis for the reviews is : " + str(final/len(reviews) * 10) + "/10.0"
-
-print(get_revs("Japanese Tea Garden",  "San Francisco"))
