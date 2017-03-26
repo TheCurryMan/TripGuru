@@ -259,7 +259,7 @@ def sortAttractions(data):
    print "Durations: " + str(list_of_durations)
    dictionary = dict(zip(ordered_list_of_places,list_of_durations))
    print(dictionary)
-   return dictionary
+   return convert(dictionary)
 
 def convert(data):
     if isinstance(data, basestring):
@@ -299,4 +299,3 @@ def totalTime(self, list_of_cities):
    for d in list_of_durations:
       totalDur += d
    return totalDur
-
