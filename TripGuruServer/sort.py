@@ -1,5 +1,6 @@
 import math
 import random
+import json
 
 class City:
    def __init__(self, name, x=None, y=None):
@@ -245,27 +246,38 @@ def sortAttractions(data):
 
    for city in bestPop:
       ordered_list_of_places.append(city.getName())
+   list_of_durations = getTime(ordered_list_of_places)
+   dictionary = dict(zip(ordered_list_of_places,list_of_durations))
+   final = json.dumps(dictionary)
+   return final
 
-   return ordered_list_of_places
+def getTime(self, list_of_cities):
+   d = {}
+   d['origin'] = list_of_cities[0].getX() + "," + list_of_cities[0].getY()
+   d['destination'] = list_of_cities[len(list_of_cities) - 1].getX() + "," + list_of_cities[len(list_of_cities) - 1].getY()
+   if(len(list_of_cities) > 2):
+      waypoint = list_of_cities[2].getX() + "," + list_of_cities[2].getY() + "|"
+   for city in list_of_cities[2:(len(list_of_cities) - 3)]:
+      waypoint += city.getX() + "," + city.getY() + "|"
+   waypoint += list_of_cities[len(list_of_cities) - 2].getX() + "," + list_of_cities[len(list_of_cities) - 2].getY()
+   d['waypoint'] = waypoint
+   d['key'] = "AIzaSyA_KUnYEKuOodre8lcfEhYQZbwmQhxqgwY"
+   r = requests.get("https://maps.googleapis.com/maps/api/directions/json?", d)
+   data = r.text
+   data = convert(data)
+   final = json.loads(data)
+   list_of_durations = []
+   list_of_durations.append(1)
+   for leg in final['routes'][0]['legs']:
+      list_of_durations.append(int(['duration']['value'])+1)
+   return list_of_durations
 
-# def getTime(self, list_of_places):
-# d = {}
-#    d['origin'] = attractions_list[0]
-#    d['destination'] = attractions_list[1];
-#    if(attractions_list > 2):
-#       waypoint = attractions_list[2].lat + "," + attractions_list[2].lng + "|"
-#    for a in attractions_list[2: ]:
-#       waypoint += a.lat + "," + a.lng + "|"
-#    d['waypoint'] = waypoint
-#    r = requests.get("https://maps.googleapis.com/maps/api/directions/json?origin=sydney,au&destination=perth,au&waypoints=-37.81223%2C144.96254%7C-34.92788%2C138.60008&key=AIzaSyA_KUnYEKuOodre8lcfEhYQZbwmQhxqgwY")
-#    data = r.text
-#    data = convert(data)
-#    final = json.loads(data)
-#    print(type(final))
-#    dist = 0
-#    for leg in final['routes'][0]['legs']:
-#          dist += print leg['duration']['value']
-#       return dist
+def totalTime(self, list_of_cities)
+   list_of_durations = getTime(list_of_cities)
+   totalDur = 0
+   for d in list_of_durations:
+      totalDur += d
+   return totalDur
 
    
    
