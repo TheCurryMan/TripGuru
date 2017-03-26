@@ -20,7 +20,6 @@ def attractions():
 
 @app.route('/sort', methods=['GET', 'POST'])
 def sort():
-
   return sortAttractions(request.args.get('data'))
 
 

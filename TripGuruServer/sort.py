@@ -1,6 +1,8 @@
 import math
 import random
 import json
+import requests
+
 
 class City:
    def __init__(self, name, x=None, y=None):
@@ -231,13 +233,13 @@ def sortAttractions(data):
    for string in latestData:
       tour_manager.addCity(City(string[0], string[1], string[2]))
       list_of_places.append(string[0])
-      list_of_coordinates.append(City(string[0], string[1], string[2]))
+      list_of_cities.append(City(string[0], string[1], string[2]))
    #Initialize pop and run GA
-   pop = Population(tourmanager, 50, True);
+   pop = Population(tour_manager, 50, True);
    print "Initial distance: " + str(pop.getFittest().getDistance())
    
    # Evolve population for 50 generations
-   ga = GA(tourmanager)
+   ga = GA(tour_manager)
    pop = ga.evolvePopulation(pop)
    for i in range(0, 100):
       pop = ga.evolvePopulation(pop)
