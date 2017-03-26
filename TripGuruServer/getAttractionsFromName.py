@@ -26,14 +26,11 @@ def getAttractions(name):
             return data
 
     yelp_api = YelpAPI(client_id, client_secret)
-    search_results = yelp_api.search_query(term='attraction', location=name, sort_by='rating', limit=8)
+    search_results = yelp_api.search_query(term='attractions', location=name, sort_by='review_count', limit=8)
     converted = (convert(search_results))
-
-    val = "Attraction"
-    counter = 1
     finalDict = {}
     for places in converted["businesses"]:
-        idx = val + str(counter)
+
         name = places["name"]
         lat = places['coordinates']['latitude']
         lng = places['coordinates']['longitude']
