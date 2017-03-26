@@ -7,7 +7,7 @@ def get_revs(attraction, city):
     print(city)
     attraction = convertSpaces(attraction)
     city = convertSpaces(city)
-    url = "https://www.yelp.com/biz/" + attraction + "-" + city 
+    url = "https://www.yelp.com/biz/" + attraction + "-" + city
     r = requests.get(url)
 
     data = r.text
@@ -31,5 +31,3 @@ def calculate_review_num(reviews):
         perc = rev['probability'][label]
         sum = (sum + perc)
     return sum/len(reviews) * 10
-
-print(get_revs("Golden Gate Bridge", "San Francisco"))
