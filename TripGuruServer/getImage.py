@@ -10,6 +10,7 @@ def get_soup(url,header):
 def getImageURLfromName(query, num = 1): #num less than 100
     #query = raw_input("query image")# you can change the query for the image  here
     image_type="img"
+    query = query + " hd"
     query= query.split()
     query='+'.join(query)
     url="https://www.google.co.in/search?q="+query+"&source=lnms&tbm=isch"
